@@ -112,31 +112,6 @@ npm run dev
 
 ---
 
-## ☁️ Deployment
-
-You can deploy this MERN application on various platforms.
-
-### Recommended Options
-
-| Platform                            | Best For                 | Details                                                                       |
-| :---------------------------------- | :----------------------- | :---------------------------------------------------------------------------- |
-| **[Render](https://render.com/)**   | **Full Stack (Easiest)** | Deploy both Backend (Web Service) and Frontend (Static Site) for free.        |
-| **[Vercel](https://vercel.com/)**   | **Frontend Only**        | Best performance for the React Frontend. (Requires separate backend hosting). |
-| **[Railway](https://railway.app/)** | **Full Stack**           | Great developer experience for full-stack apps and databases.                 |
-
-### Quick Deploy (Render)
-
-1.  **Backend**: Create a new **Web Service**, connect this repo, and set the Root Directory to `backend`.
-    - **Build Command**: `npm install`
-    - **Start Command**: `node server.js`
-    - **Environment Variables**: Add all variables from your `.env` file.
-2.  **Frontend**: Create a new **Static Site**, connect this repo, and set the Root Directory to `frontend`.
-    - **Build Command**: `npm run build`
-    - **Publish Directory**: `dist`
-    - **Environment Variables**: Add `VITE_API_URL` pointing to your backend URL.
-
----
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
