@@ -33,18 +33,6 @@
 
 ---
 
-## 🎨 Gallery
-
-|                              **Home Page**                              |                           **Product Details**                            |
-| :---------------------------------------------------------------------: | :----------------------------------------------------------------------: |
-| ![Home](https://placehold.co/600x400/1a1a1a/FFF?text=Home+Page+Preview) | ![Product](https://placehold.co/600x400/1a1a1a/FFF?text=Product+Details) |
-
-|                        **Cart & Checkout**                         |                          **Admin Dashboard**                           |
-| :----------------------------------------------------------------: | :--------------------------------------------------------------------: |
-| ![Cart](https://placehold.co/600x400/1a1a1a/FFF?text=Cart+Preview) | ![Admin](https://placehold.co/600x400/1a1a1a/FFF?text=Admin+Dashboard) |
-
----
-
 ## 🚀 Getting Started
 
 Follow these steps to set up the project locally.
@@ -121,6 +109,31 @@ npm run dev
 - **Database:** MongoDB & Mongoose
 - **Auth:** JWT & Bcrypt
 - **Storage:** Cloudinary
+
+---
+
+## ☁️ Deployment
+
+You can deploy this MERN application on various platforms.
+
+### Recommended Options
+
+| Platform                            | Best For                 | Details                                                                       |
+| :---------------------------------- | :----------------------- | :---------------------------------------------------------------------------- |
+| **[Render](https://render.com/)**   | **Full Stack (Easiest)** | Deploy both Backend (Web Service) and Frontend (Static Site) for free.        |
+| **[Vercel](https://vercel.com/)**   | **Frontend Only**        | Best performance for the React Frontend. (Requires separate backend hosting). |
+| **[Railway](https://railway.app/)** | **Full Stack**           | Great developer experience for full-stack apps and databases.                 |
+
+### Quick Deploy (Render)
+
+1.  **Backend**: Create a new **Web Service**, connect this repo, and set the Root Directory to `backend`.
+    - **Build Command**: `npm install`
+    - **Start Command**: `node server.js`
+    - **Environment Variables**: Add all variables from your `.env` file.
+2.  **Frontend**: Create a new **Static Site**, connect this repo, and set the Root Directory to `frontend`.
+    - **Build Command**: `npm run build`
+    - **Publish Directory**: `dist`
+    - **Environment Variables**: Add `VITE_API_URL` pointing to your backend URL.
 
 ---
 
