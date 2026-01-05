@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useGetProductsQuery } from '../slices/productsApiSlice';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
-import { ArrowRight, Star, Truck, ShieldCheck, RefreshCw } from 'lucide-react';
+import { ArrowRight, Star, Truck, ShieldCheck, RefreshCw, Clock, CreditCard, Quote, Send, Heart } from 'lucide-react';
 
 import heroBg from '../assets/hero-bg.jpg';
 import heroProduct from '../assets/hero-product.jpg';
