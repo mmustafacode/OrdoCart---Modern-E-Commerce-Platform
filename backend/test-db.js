@@ -1,7 +1,7 @@
 import { MongoClient } from 'mongodb';
 
 // Replaced <db_password> with the actual password from .env
-const uri = "mongodb+srv://mm:mm@cluster0.zeyyjkm.mongodb.net/ordocart?appName=Cluster0";
+const uri = process.env.MONGO_URI;
 
 // Create a new MongoClient
 const client = new MongoClient(uri);
