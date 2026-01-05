@@ -1,11 +1,16 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { ArrowRight, Star, Truck, ShieldCheck, Clock, CreditCard, Quote, Send, Heart } from 'lucide-react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useGetProductsQuery } from '../slices/productsApiSlice';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
+import { ArrowRight, Star, Truck, ShieldCheck, RefreshCw } from 'lucide-react';
+
+import heroBg from '../assets/hero-bg.jpg';
+import heroProduct from '../assets/hero-product.jpg';
+import avatar1 from '../assets/avatar-1.jpg';
+import avatar2 from '../assets/avatar-2.jpg';
+import avatar3 from '../assets/avatar-3.jpg';
 import { addToWishlist } from '../slices/wishlistSlice';
 import { toast } from 'react-toastify';
 
@@ -22,11 +27,14 @@ const HomeScreen = () => {
 
     return (
         <div className="animate-fadeIn bg-gray-50 min-h-screen">
-            {/* Hero Section (Hide on Search) */}
+            {/* Hero Section */}
             {!keyword && (
-                <div className="relative bg-[#0F172A] text-white overflow-hidden mb-0 shadow-2xl">
-                    <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-[#0F172A] to-black z-10 opacity-90" />
-                    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80')] bg-cover bg-center mix-blend-overlay opacity-30" />
+                <div className="relative bg-gray-900 text-white overflow-hidden mb-12 rounded-3xl mx-4 lg:mx-0">
+                    <div 
+                        className="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-30"
+                        style={{ backgroundImage: `url(${heroBg})` }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/40 to-transparent" />
 
                     <div className="relative z-20 container mx-auto px-6 pt-32 pb-20 md:pt-40 md:pb-32">
                         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
@@ -58,8 +66,8 @@ const HomeScreen = () => {
                             <div className="md:w-1/2 relative animate-fadeIn mt-10 md:mt-0">
                                 <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border border-white/10 transform rotate-2 hover:rotate-0 transition-transform duration-500">
                                     <img
-                                        src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&q=80&w=800"
-                                        alt="Hero Product"
+                                        src={heroProduct}
+                                        alt="Premium Audio"
                                         className="w-full h-auto object-cover"
                                         onError={(e) => {
                                             e.target.onerror = null;
@@ -229,19 +237,19 @@ const HomeScreen = () => {
                                     name: "Alex Thompson",
                                     role: "Verified Buyer",
                                     text: "The quality of the products is unmatched. Shipping was incredibly fast, and the customer service team went above and beyond!",
-                                    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=100"
+                                    image: avatar1,
                                 },
                                 {
                                     name: "Sarah Jenkins",
                                     role: "Tech Enthusiast",
                                     text: "I love the clean design of the store and how easy it is to find exactly what I'm looking for. Definitely my go-to for tech gear.",
-                                    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=100"
+                                    image: avatar2,
                                 },
                                 {
                                     name: "Michael Chen",
                                     role: "Verified Buyer",
                                     text: "Premium packaging, premium products. You can tell they really care about the customer experience. Highly recommended!",
-                                    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=100"
+                                    image: avatar3,
                                 }
                             ].map((review, i) => (
                                 <div key={i} className="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-500/10 group">

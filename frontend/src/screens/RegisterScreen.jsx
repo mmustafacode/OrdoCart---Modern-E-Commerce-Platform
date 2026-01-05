@@ -49,12 +49,11 @@ const RegisterScreen = () => {
     return (
         <div className="min-h-screen flex text-gray-900">
             {/* Left Side - Image */}
-            <div className="hidden lg:flex lg:w-1/2 bg-[#0F172A] relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-tr from-indigo-600/20 to-pink-600/20 z-10" />
+            <div className="hidden lg:block w-1/2 relative bg-gray-900">
                 <img
-                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2070&auto=format&fit=crop"
-                    alt="Register Background"
-                    className="absolute inset-0 w-full h-full object-cover opacity-60"
+                    className="absolute inset-0 h-full w-full object-cover opacity-60"
+                    src={registerBg}
+                    alt="Office"
                 />
                 <div className="relative z-20 flex flex-col justify-center px-16 text-white h-full">
                     <h1 className="text-6xl font-bold font-heading mb-6">Join the Revolution.</h1>
